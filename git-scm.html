@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Theory of Practical git</title>
+
+		<meta name="description" content="Theory of Practical git">
+		<meta name="author" content="Emin Aksehirli">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style TYPE="text/css"> 
+			span.pre {
+				font-family:monospace;
+				font-weight:bold;
+				background-color:#333333;
+				border:1px solid #999999;
+				padding-left:5px;
+				padding-right:5px;
+				padding-top:2px;
+				padding-bottom:2px;
+				/*color:black;*/
+			}
+			
+		</style> 
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>git</h1>
+					<h3>Practical Version Control</h3>
+					<p>
+						<small>by Emin</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Why <strong>git</strong>?</h2>
+					<ul>
+						<li class="fragment">The name is intended</li>
+						<li class="fragment">Distributed</li>
+							<ul>
+							<li class="fragment">no need for a connection to work</li>
+							<li class="fragment"><em>integrated</em> backup</li>
+							<li class="fragment">own playground</li>
+							</ul>
+						</li>
+						<li class="fragment">Free</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Learn to ... <span class="fragment"><em>fall</em></span></h2>
+					<ul>
+						<li class="fragment"><em>Don't</em> panic, your data is probably there</li>
+						<li class="fragment"><em>Don't</em> <span class="pre"> push</span></li>
+						<li class="fragment"><em>Don't</em> <span class="pre"> force</span></li>
+						<li class="fragment"><em>Don't</em> <span class="pre"> gc</span></li>
+						<li class="fragment"><em>Don't</em> delete</li>
+						<li class="fragment">When in doubt, create a copy of the folder.</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Keep in mind...</h2>
+					<ul>
+						<li class="fragment">It's not magic</li>
+						<li class="fragment"><span class="pre">git</span> is composed of simple building blocks</li>
+						<li class="fragment"><span class="pre">git</span> is not smart</li>
+					</ul>
+				</section>
+				
+				
+				<section>
+					<h2>Simple workflow</h2>
+					<ol>
+						<li class="fragment">Create/modify files</li>
+						<li class="fragment">Add them to staging (index)</li>
+						<li class="fragment">Commit it with a message</li>
+						<li class="fragment">GOTO 1</li>
+					</ol>
+				</section>
+
+				<section>
+					<section>
+						<h2>Working with branches</h2>
+						<ul>
+							<li class="fragment">Branching is copying, but smarter.</li>
+							<li class="fragment">A branch is a copy of entire project.</li>
+							<li class="fragment">To save space only the differences are stored.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>How to branch?</h3>
+						<ol>
+							<li class="fragment">Create a branch</li>
+							<li class="fragment">Switch to branch</li>
+							<li class="fragment">Create/modify files</li>
+							<li class="fragment">Add them to staging (index)</li>
+							<li class="fragment">Commit it with a message</li>
+							<li class="fragment">GOTO 3</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Incorporating changes</h3>
+						<p>Use <span class="pre">git merge</pre></p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Working with a remote</h2>
+						<ul>
+							<li class="fragment">When you <span class="pre">clone</span>, there are two repositories</li>
+							<li class="fragment">Branches between repositories can be connected (tracking)</li>
+							<li class="fragment">Your local repository keeps references for remote branches</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Remote commands</h3>
+						<ul>
+							<li class="fragment"><span class="pre">git clone</span></li>
+							<li class="fragment"><span class="pre">git fetch</span></li>
+							<li class="fragment"><span class="pre">git pull</span></li>
+							<li class="fragment"><span class="pre">git push</span></li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Amending Mistakes</h2>
+						<p class="fragment">How to get up?</p>
+					</section>
+					<section>
+						<h3>Oops...</h3>
+						<p><q class="fragment">&ldquo;I made a mistake.&rdquo;</q></p>
+						<span class="pre fragment">git commit --amend</span>
+					</section>
+					<section>
+						<h3>Meh...</h3>
+						<p><q class="fragment">&ldquo;I give up.&rdquo;</q></p>
+						<span class="pre fragment">git checkout file_name</span>
+					</section>
+					<section>
+						<h3>Hmm...</h3>
+						<p><q class="fragment">&ldquo;I can do it better.&rdquo;</q></p>
+						<p><span class="pre fragment">git reset F39AC4</span></p>
+						<p class="fragment"> [ soft | mixed | hard ]</p>
+					</section>
+					<section>
+						<h3>Well...</h3>
+						<p><q class="fragment">&ldquo;I should've never done that.&rdquo;</q></p>
+						<span class="pre fragment">git revert F39A</span>
+					</section>
+					<section>
+						<h3>More<h3>
+						<p>Find more about amending at <a href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git">GitHub's guide</a></p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Some tips</h2>
+						<p class="fragment">Make your lifes easier</p>
+					</section>
+					<section>
+						<h3>Read the helpful manual</h3>
+						<p class="fragment"><span class="pre"><span class="fragment">man </span>git pull</span></p>
+						<p class="fragment">(ಠ_ಠ)</p>
+						<p class="fragment"><span class="pre">man git-pull</p>
+						<p class="fragment">(ᵔᴥᵔ)</p>
+						<ul class="fragment">
+							<li><span class="pre">git-commit<span></li>
+							<li><span class="pre">git-merge<span></li>
+							<li><span class="pre">git-gui<span></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ignore irrelevant files</h3>
+						<p class="fragment"><span class="pre">.gitignore</span></p>
+						<p class="fragment"><span class="pre">.git/info/exclude</span></p>
+					</section>
+					<section>
+						<h3>UN-ignore a file</h3>
+						<p class="fragment"><span class="pre">git add --force file_name</span></p>
+					</section>
+					<section>
+						<h3>Renaming</h3>
+						<p class="fragment grow">Choose one:</p> 
+						<ol>
+							<li>Change the filename</li>
+							<li>Change the content</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Changing the context</h3>
+						<ul>
+							<li class="fragment"><span class="pre">git stash</li>
+							<li class="fragment"><span class="pre">git stash pop</li>
+							<li class="fragment"><span class="pre">git stash apply</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Diff's are line-based</h3>
+						<p class="fragment" style="font-size:smaller;">yes...</p>
+					</section>
+				</section>
+				
+				
+				<section>
+					<h2>How we do it?</h2>
+					<p class="fragment">We use a modified version of <a href="https://guides.github.com/introduction/flow/index.html">Git Flow</a>.</p>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Development Process</h2>
+					</section>
+					<section>
+						<h3>Overview</h3>
+						<img style="max-height:500px;" src="assets/git-scm/pm_workflow.png" alt="Development workflow"/>
+					</section>
+					<section>
+						<h3>Streamlined process</h3>
+						<ol>
+							<li class="fragment">(J) Assign the issue in JIRA</li>
+							<li class="fragment">(J) Move issue to "under development" in JIRA</li>
+							<li class="fragment">(G) Crate a new branch</li>
+							<li class="fragment">(J G) Develop<span class="fragment"> and use <a href="https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html">smart commits</a></span></li>
+							<li class="fragment">(G) Push it as a new remote branch</li>
+							<li class="fragment">(G) Develop more</li>
+							<li class="fragment">(G) Use the tag with the last commit
+								<p><span class="pre">MOBIL-17 #development</span></p>
+							</li>
+							<li class="fragment">(G) Make a pull request when done</li>
+							<li class="fragment">(G) Wait for review</li>
+							<li class="fragment">(G) Resolve issues and push again</li>
+							<li class="fragment">(G) GOTO 9</li>
+						</ol>
+					</section>
+					<section>
+						<h3>JIRA Interface</h3>
+						<img style="max-height:500px;" src="assets/git-scm/pm_header.png" alt="JIRA Control Panel" />
+					</section>
+				</section>
+				<section>
+					<h2>Happy Coding!</h2>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
