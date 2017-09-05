@@ -152,6 +152,12 @@
 							<li class="fragment"><span class="pre">git push</span></li>
 						</ul>
 					</section>
+					<section>
+						<h3>Keep the history clean</h3>
+						<p class="fragment">Use <span class="pre">git pull --rebase</span></p>
+						<p class="fragment">instead of <span class="pre">git pull</span>.</p>
+						<p class="fragment">Difference is in the history</p>
+					</section>
 				</section>
 				
 				<section>
@@ -229,6 +235,25 @@
 						</ul>
 					</section>
 					<section>
+						<h3>Don't commit large files</h3>
+						<ul>
+							<li class="fragment">Because they inflate history</li>
+							<li class="fragment"><strong>Large file:</strong> &gt 100KiB</li>
+							<li class="fragment">Use <span class="pre">git lfs</span> instead</li>
+							<li class="fragment"><a href="https://git-lfs.github.com" alt="Web site of git-lfs">git-lfs.github.com</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Use GUI tools</h3>
+						<p><span class="pre">gitk --all</span></p>
+						<img class="fragment" src="assets/git-scm/gitk.png" alt="Screenshot of gitk"/>
+					</section>
+					<section>
+						<h3>Use GUI tools</h3>
+						<p><span class="pre">git gui</span></p>
+						<img class="fragment" src="assets/git-scm/git-gui.png" alt="Screenshot of git-gui"/>
+					</section>
+					<section>
 						<h3>Diff's are line-based</h3>
 						<p class="fragment" style="font-size:smaller;">yes...</p>
 					</section>
@@ -253,14 +278,11 @@
 						<ol>
 							<li class="fragment">(J) Assign the issue in JIRA</li>
 							<li class="fragment">(J) Move issue to "under development" in JIRA</li>
-							<li class="fragment">(G) Crate a new branch</li>
-							<li class="fragment">(J G) Develop<span class="fragment"> and use <a href="https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html">smart commits</a></span></li>
+							<li class="fragment">(G) Create a new branch with the ticket name</li>
+							<li class="fragment">(J G) Develop and commit</li>
 							<li class="fragment">(G) Push it as a new remote branch</li>
 							<li class="fragment">(G) Develop more</li>
-							<li class="fragment">(G) Use the tag with the last commit
-								<p><span class="pre">MOBIL-17 #development</span></p>
-							</li>
-							<li class="fragment">(G) Make a pull request when done</li>
+							<li class="fragment">(G) Make a <strong>pull request</strong> to <span class="pre">dev-x.y.z</span> branch when done</li>
 							<li class="fragment">(G) Wait for review</li>
 							<li class="fragment">(G) Resolve issues and push again</li>
 							<li class="fragment">(G) GOTO 9</li>
