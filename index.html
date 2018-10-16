@@ -1,49 +1,32 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <head>
+  <meta charset="utf-8">
+  <title>Repository of DataSpark Presentations</title>
+  <style>
+   a {color: #42affa;}
+   a:hover {text-decoration: underline; color: #52bffa;}
+   li {margin-top:5px; margin-bottom:5px;}
+  </style>
+ </head>
+ <body style="color:white;background:black;font-family:sans-serif">
+  <div style="width:60%;margin-top:10%;margin-left:auto;margin-right:auto">
+   <p>
+    Presentations:
+   </p>
+   <ul>
+    <li><a href="git-scm.html">git-scm</a>: Introduction to Git version control system.</li>
+    <li>Data Science at Scale with Apache Zeppelin<sup>&#174;</sup>:
+     <ul>
+      <li><a href="zeppelin.html">v1</a> - Presented at <a href="https://2018.fossasia.org/" rel="nofollow">FossAsia 2018</a> on 2018-03-25</li>
+      <li><a href="zeppelin.ds.html">v2</a> - Presented at Dataspark Meetup 4.0 on 2018-05-25</li>
+      <li><a href="zeppelin.eu.html">v3</a> - Presented at Eureka AI Meetup on 2018-10-15</li>
+     </ul>
+    </li>
+   </ul>
 
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+   <p>
+    Please check <a href="https://github.com/datasparkanalytics/js-presentations">https://github.com/datasparkanalytics/js-presentations</a> for the most updated version.
+   </p>
+  </div>
+ </body>
 </html>
