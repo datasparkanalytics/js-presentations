@@ -11,7 +11,10 @@ running a simple python http server:
 ## Presentations
 
 - [git-scm](git-scm.html): Introduction to Git version control system.
-
+- Zeppelin Presentations:
+  - [v1](zeppelin.html) - Presented at [FossAsia 2018](https://2018.fossasia.org/) on 2018-03-25
+  - [v2](zeppelin.ds.html) - Presented at Dataspark Meetup 4.0 on 2018-05-25
+  - [v3](zeppelin.eu.html) - Presented at Eureka AI Meetup on 2018-10-15
 
 ### Licensing
 Presentations and related figures are under the copyright of DataSpark and distributed under Apache License version 2.
